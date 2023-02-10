@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/velgenpoc/auth/static/css/main.5497db36.css",
-    "main.js": "/velgenpoc/auth/static/js/main.45f9b30e.js",
-    "static/js/787.1ee71613.chunk.js": "/velgenpoc/auth/static/js/787.1ee71613.chunk.js",
-    "index.html": "/velgenpoc/auth/index.html",
-    "main.5497db36.css.map": "/velgenpoc/auth/static/css/main.5497db36.css.map",
-    "main.45f9b30e.js.map": "/velgenpoc/auth/static/js/main.45f9b30e.js.map",
-    "787.1ee71613.chunk.js.map": "/velgenpoc/auth/static/js/787.1ee71613.chunk.js.map"
+    "main.css": "/velgenpoc/static/css/main.5497db36.css",
+    "main.js": "/velgenpoc/static/js/main.934b4248.js",
+    "static/js/787.1ee71613.chunk.js": "/velgenpoc/static/js/787.1ee71613.chunk.js",
+    "index.html": "/velgenpoc/index.html",
+    "main.5497db36.css.map": "/velgenpoc/static/css/main.5497db36.css.map",
+    "main.934b4248.js.map": "/velgenpoc/static/js/main.934b4248.js.map",
+    "787.1ee71613.chunk.js.map": "/velgenpoc/static/js/787.1ee71613.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5497db36.css",
-    "static/js/main.45f9b30e.js"
+    "static/js/main.934b4248.js"
   ]
 }
