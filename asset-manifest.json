@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/velgenpoc/static/css/main.5497db36.css",
-    "main.js": "/velgenpoc/static/js/main.f1f2ea88.js",
+    "main.js": "/velgenpoc/static/js/main.f073d52b.js",
     "static/js/787.1ee71613.chunk.js": "/velgenpoc/static/js/787.1ee71613.chunk.js",
     "index.html": "/velgenpoc/index.html",
     "main.5497db36.css.map": "/velgenpoc/static/css/main.5497db36.css.map",
-    "main.f1f2ea88.js.map": "/velgenpoc/static/js/main.f1f2ea88.js.map",
+    "main.f073d52b.js.map": "/velgenpoc/static/js/main.f073d52b.js.map",
     "787.1ee71613.chunk.js.map": "/velgenpoc/static/js/787.1ee71613.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5497db36.css",
-    "static/js/main.f1f2ea88.js"
+    "static/js/main.f073d52b.js"
   ]
 }
