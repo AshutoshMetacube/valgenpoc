@@ -10,6 +10,10 @@ const Auth = () => {
 
   const [code, setCode] = useState("");
   const navigate = useNavigate();
+  
+  const search = window.location.search;
+  const params = new URLSearchParams(search);
+  const codeText = params.get("code");
 
   useEffect(() => {
     setCode(decodeURIComponent(searchParams.get("code")));
@@ -17,10 +21,10 @@ const Auth = () => {
       const baseURL = "https://resilient-narwhal-ue20v8-dev-ed.trailblaze.my.salesforce.com/services/oauth2/token";
       let body = {
         grant_type: "authorization_code",
-        code:code,
+        code:codeText,
         client_id: process.env.REACT_APP_CLIENT_ID,
         client_secret: process.env.REACT_APP_CLIENT_SECRET,
-        redirect_uri: process.env.REACT_APP_REDIRECT_URI,
+        redirect_uri: 'https://ashutoshmetacube.github.io/velgenpoc/#/auth',
       };
 
       const options = {
