@@ -6,6 +6,7 @@ import qs from "qs";
 import Loader from "./Loader";
 
 const Auth = () => {
+  const referrer = document.referrer;
   const [searchParams] = useSearchParams();
 
   const [code, setCode] = useState("");
@@ -18,7 +19,7 @@ const Auth = () => {
   useEffect(() => {
     setCode(decodeURIComponent(searchParams.get("code")));
     const getToken = async () => {
-      const baseURL = "https://resilient-narwhal-ue20v8-dev-ed.trailblaze.my.salesforce.com/services/oauth2/token";
+      const baseURL = `${document.referrer}services/oauth2/token`;
       let body = {
         grant_type: "authorization_code",
         code:codeText,
