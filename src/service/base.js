@@ -8,7 +8,7 @@ let language = "en";
 api.interceptors.request.use(
   async (config) => {
     if (config && config.headers) {
-      const token = await localStorage.getItem("token");
+      const token = await sessionStorage.getItem("token");
       config.headers = {
         ...config.headers,
         "X-SHOP-Platform": "web",

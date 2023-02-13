@@ -1,9 +1,9 @@
 import React from "react";
 import "./home.scss";
-const Home = () => {
+const Home = ({style}) => {
 let  token = "";
-if(localStorage.getItem('token')){
-      token = localStorage.getItem('token');
+if(sessionStorage.getItem('token')){
+      token = sessionStorage.getItem('token');
 }
   const handelAuthConnect = () => {
 
@@ -12,20 +12,18 @@ if(localStorage.getItem('token')){
     window.location.href = targetUrl;
   };
   const handelAuthDisConnect = () => {
-
-    localStorage.clear();
+    sessionStorage.clear();
+    window.location.href = "/";
   };
 
   return (
     <div>
-      <div  className="connect">
+      <div  className="connect" style={style}>
         <div className="leftBlock">
          <span className="sfImg"></span>
         <h6>Salesforce</h6>   
         </div>
         {(!token) ? <button className="salesforceBtn" onClick={handelAuthConnect}>Connect</button> : <button className="salesforceBtn" onClick={handelAuthDisConnect}>Disconnect</button> }
-        
-        
       </div>
     </div>
   );

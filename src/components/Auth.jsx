@@ -1,20 +1,23 @@
 import React, { useEffect, useState } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import qs from "qs";
+//import LoadingOverlay from "react-loading-overlay";
+import Loader from "./Loader";
 
 const Auth = () => {
   const [searchParams] = useSearchParams();
 
   const [code, setCode] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     setCode(decodeURIComponent(searchParams.get("code")));
     const getToken = async () => {
-      const baseURL = "https://login.salesforce.com/services/oauth2/token";
+      const baseURL = "https://resilient-narwhal-ue20v8-dev-ed.trailblaze.my.salesforce.com/services/oauth2/token";
       let body = {
         grant_type: "authorization_code",
-        code,
+        code:code,
         client_id: process.env.REACT_APP_CLIENT_ID,
         client_secret: process.env.REACT_APP_CLIENT_SECRET,
         redirect_uri: process.env.REACT_APP_REDIRECT_URI,
@@ -26,12 +29,20 @@ const Auth = () => {
         data: qs.stringify(body),
         url: baseURL,
       };
-      console.log("options >>>", JSON.stringify(options));
+
       await axios(options)
         .then((response) => {
           console.log("response>>>>", response);
+          console.log("response.data>>>>", JSON.stringify(response.data));
+          console.log("response.data.access_token>>>>", JSON.stringify(response.data.access_token));
+          sessionStorage.setItem('data', JSON.stringify(response.data))
+          sessionStorage.setItem('token', response.data.access_token)
+          navigate('/csv')
         })
         .catch((e) => {
+          // sessionStorage.setItem('data', JSON.stringify(sample))
+          // sessionStorage.setItem('token', sample.access_token)
+          // navigate('/csv')
           console.log("e >>>", e);
         });
     };
@@ -40,7 +51,9 @@ const Auth = () => {
     }
   }, [code, searchParams]);
 
-  return <div>Auth code page</div>;
+  return (
+    <Loader isActive={true} />
+  )
 };
 
 export default Auth;
