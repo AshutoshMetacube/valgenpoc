@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/valgenpoc/static/css/main.284caa13.css",
-    "main.js": "/valgenpoc/static/js/main.b9994ca9.js",
+    "main.js": "/valgenpoc/static/js/main.9a242f75.js",
     "static/js/787.1ee71613.chunk.js": "/valgenpoc/static/js/787.1ee71613.chunk.js",
     "index.html": "/valgenpoc/index.html",
     "main.284caa13.css.map": "/valgenpoc/static/css/main.284caa13.css.map",
-    "main.b9994ca9.js.map": "/valgenpoc/static/js/main.b9994ca9.js.map",
+    "main.9a242f75.js.map": "/valgenpoc/static/js/main.9a242f75.js.map",
     "787.1ee71613.chunk.js.map": "/valgenpoc/static/js/787.1ee71613.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.284caa13.css",
-    "static/js/main.b9994ca9.js"
+    "static/js/main.9a242f75.js"
   ]
 }
